@@ -350,6 +350,10 @@
   font-size: 80px;
 }
 .footer-mine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   background-color: white;
 }
 .footer-mine h2 {
@@ -438,6 +442,40 @@
 }
 .footerMine a {
   color: #858585;
+
+}
+.Cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Cards button {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size: 30px;
+    background-color: skyblue;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-top: 20px;
+}
+.Cards input {
+    margin-left: 10px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.Cards label {
+    margin-left: 10px;
+    font-size: 20px;
 }
 @media screen and (max-width: 992px) {
   .content-menu h1 {
