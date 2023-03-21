@@ -96,6 +96,7 @@
 }
 .mine-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin-top: 30px;
@@ -105,20 +106,52 @@
   background-color: #f5f5f5;
   margin-bottom: 30px;
 }
-.content-box1 {
+.content-box-foods {
   width: 400px;
-  height: 300px;
+  height: 500px;
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+  margin-bottom: 27px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.content-box-foods p {
+    width: 300px;
+}
+.content-box-foods button {
+    width: 300px;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: skyblue;
+}
+.boxFoods {
+  width: 400px;
+  height: 500px;
   border: 1px solid black;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+ 
 }
-.box1 {
-  width: 130px;
+.box-pic-foods {
+  width: 200px;
   height: 190px;
-  border: 1px solid black;
+  border: none;
   background-image: url(../img/ghormeSabzi.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -129,6 +162,7 @@
   align-items: center;
   margin: 20px 0px;
   color: white;
+  
 }
 .content-box1 :nth-child(2) {
   margin-bottom: 20px;
@@ -153,8 +187,11 @@
 .box2 {
   width: 100px;
   height: 120px;
-  border: 1px solid black;
-  background-color: rgb(21, 214, 47);
+  border: none;
+  background-image: url(../img/kabab.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -174,7 +211,7 @@
 }
 .content-box3 {
   width: 400px;
-  height: 300px;
+  height: 500px;
   border: 1px solid black;
   background-color: white;
   display: flex;
@@ -185,8 +222,11 @@
 .box3 {
   width: 100px;
   height: 120px;
-  border: 1px solid black;
-  background-color: rgb(21, 214, 205);
+  border: none;
+  background-image: url(../img/gheyme.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 50%;
   display: flex;
   justify-content: center;
