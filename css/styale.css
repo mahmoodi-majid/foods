@@ -8,6 +8,7 @@
   font-family: "coolvetica";
   src: url("../font/coolvetica\ rg\ it.otf");
 }
+
 .menu {
   background-image: url(../img/dark_tint.png), url(../img/bamiye.jpg);
   background-size: cover;
@@ -124,18 +125,18 @@
   -o-border-radius: 20px;
 }
 .content-box-foods p {
-    width: 300px;
+  width: 300px;
 }
 .content-box-foods button {
-    width: 300px;
-    border: none;
-    padding: 16px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    background-color: skyblue;
+  width: 300px;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: skyblue;
 }
 .boxFoods {
   width: 400px;
@@ -146,7 +147,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
- 
 }
 .box-pic-foods {
   width: 200px;
@@ -162,112 +162,111 @@
   align-items: center;
   margin: 20px 0px;
   color: white;
-  
 }
-.box-pic-foods1{
-    width: 200px;
-    height: 190px;
-    border: none;
-    background-image: url(../img/kabab.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    color: white;
+.box-pic-foods1 {
+  width: 200px;
+  height: 190px;
+  border: none;
+  background-image: url(../img/kabab.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  color: white;
 }
 .box-pic-foods2 {
-    width: 200px;
-    height: 190px;
-    border: none;
-    background-image: url(../img/gheyme.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    color: white;
+  width: 200px;
+  height: 190px;
+  border: none;
+  background-image: url(../img/gheyme.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  color: white;
 }
 .box-pic-foods3 {
-    width: 200px;
-    height: 190px;
-    border: none;
-    background-image: url(../img/bamiye.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    color: white;
+  width: 200px;
+  height: 190px;
+  border: none;
+  background-image: url(../img/bamiye.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  color: white;
 }
 .box-pic-foods4 {
-    width: 200px;
-    height: 190px;
-    border: none;
-    background-image: url(../img/mahi.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    color: white;
+  width: 200px;
+  height: 190px;
+  border: none;
+  background-image: url(../img/mahi.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  color: white;
 }
 .box-pic-foods5 {
-    width: 200px;
-    height: 190px;
-    border: none;
-    background-image: url(../img/morgh.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    color: white;
+  width: 200px;
+  height: 190px;
+  border: none;
+  background-image: url(../img/morgh.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  color: white;
 }
 .box-pic-foods6 {
-    width: 200px;
-    height: 190px;
-    border: none;
-    background-image: url(../img/sabzococo.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    color: white;
+  width: 200px;
+  height: 190px;
+  border: none;
+  background-image: url(../img/sabzococo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  color: white;
 }
 .box-pic-foods7 {
-    width: 200px;
-    height: 190px;
-    border: none;
-    background-image: url(../img/ashReshte.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    color: white;
+  width: 200px;
+  height: 190px;
+  border: none;
+  background-image: url(../img/ashReshte.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  color: white;
 }
 .content-box1 :nth-child(2) {
   margin-bottom: 20px;
@@ -350,10 +349,10 @@
   font-size: 80px;
 }
 .footer-mine {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
 }
 .footer-mine h2 {
@@ -442,41 +441,95 @@
 }
 .footerMine a {
   color: #858585;
-
 }
 .Cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
 }
 
-.Cards button {
-    display: block;
-    width: 100%;
-    border: none;
-    padding: 15px;
-    font-size: 30px;
-    background-color: skyblue;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    margin-top: 20px;
+.item-cards {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
 }
-.Cards input {
-    margin-left: 10px;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+
+.cart-header {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #333;
 }
-.Cards label {
-    margin-left: 10px;
-    font-size: 20px;
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
 }
+
+.prodacName {
+  width: 100px;
+  border-bottom: 1px solid black;
+}
+.cart-row {
+  display: flex;
+}
+.content-div {
+  margin: 1em;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+.content-div h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.cart-item {
+  width: 45%;
+}
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.cart-price {
+  width: 20%;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em;
+}
+.cart-item-title {
+  color: #333;
+  margin-left: 0.5em;
+  font-size: 1.2em;
+}
+
+.cart-item-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 992px) {
   .content-menu h1 {
     font-size: 50px;
