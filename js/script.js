@@ -66,6 +66,8 @@ const AllProduct = [
       "This dish is very popular in Iran and is eaten in cold weather The price is $40",
   },
 ];
+
+let userBasket = []
 const mineContent = $.querySelector(".mine-content");
 
 AllProduct.forEach((Product) => {
@@ -89,7 +91,7 @@ AllProduct.forEach((Product) => {
   let addProductBtn = $.createElement('button')
   addProductBtn.innerHTML = 'addshop'
   addProductBtn.addEventListener("click" , function(){
-    console.log(Product.id);
+    findProduct(Product.id)
   })
 
 
@@ -98,3 +100,20 @@ AllProduct.forEach((Product) => {
   mineContent.append(contentBoxFoods)
   
 });
+
+
+
+function findProduct (ProductId) {
+  
+  let SercheProduct =  AllProduct.find((Product)=> {
+    return ProductId === Product.id
+  })
+  console.log(SercheProduct);
+  userBasket.push(SercheProduct)
+  addUserBasketToCard(userBasket)
+
+}
+
+function addUserBasketToCard (userBasketPrduct) {
+  console.log(userBasketPrduct);
+}
