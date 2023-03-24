@@ -78,6 +78,7 @@ const AllProduct = [
 let userBasket = [];
 const mineContent = $.querySelector(".mine-content");
 const cartItems = $.querySelector(".cart-items");
+const cartTotalPrice = $.querySelector(".cart-total-price")
 
 AllProduct.forEach((Product) => {
   let contentBoxFoods = $.createElement("div");
@@ -115,6 +116,7 @@ function findProduct(ProductId) {
 
   userBasket.push(SercheProduct);
   addUserBasketToCard(userBasket);
+  productPrice(userBasket)
 }
 
 function addUserBasketToCard(userBasketPrduct) {
@@ -168,10 +170,22 @@ function addUserBasketToCard(userBasketPrduct) {
 function removeProductFromBasket(ProductIds) {
   console.log(ProductIds);
    userBasket =  userBasket.filter((userBasket) => {
-    console.log(userBasket);
+    
     return userBasket.id !== ProductIds
   })
   
-  console.log(userBasket);
+  
   addUserBasketToCard(userBasket)
+}
+
+
+function productPrice(userBasketPrice) {
+  let lastPrice = 0 
+  
+  userBasketPrice.forEach(function(userBasketItem){
+     
+
+    lastPrice += userBasketItem.Price
+  }) 
+  cartTotalPrice.innerHTML = lastPrice
 }
