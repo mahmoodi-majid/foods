@@ -6,7 +6,7 @@ const AllProduct = [
     ProductName: "Ghormeh sabzi",
     Price: 33,
     imgSrc: "img/ghormeSabzi.jpg",
-    avout:
+    about:
       "This Iranian food is very delicious Local meat and vegetables areused in this dishPrice: 33 $",
     count: 1,
   },
@@ -173,7 +173,6 @@ function addUserBasketToCard(userBasketPrduct) {
 }
 
 function removeProductFromBasket(ProductIds) {
-  console.log(ProductIds);
    userBasket =  userBasket.filter((userBasket) => {
     
     return userBasket.id !== ProductIds
@@ -205,6 +204,19 @@ function productPrice(userBasketPrice) {
 
 function removerAllProuduct(){
   userBasket = []
+  cartTotalPrice.innerHTML = 0
   addUserBasketToCard(userBasket)
 }
 
+(function paymentProduct(){
+  let btnPayment = $.createElement("button")
+  btnPayment.addEventListener("click" ,priceProduct)
+  btnPayment.innerHTML = "Payment"
+  btnPayment.classList = 'Payment-all-btn'
+  cartTotalPrice.insertAdjacentElement("afterend" , btnPayment )
+  
+})()
+
+ function priceProduct(){
+  alert("Thank you for visiting our store \n log in || sign up ")
+ }
