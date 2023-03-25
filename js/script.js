@@ -121,6 +121,7 @@ function findProduct(ProductId) {
 
 function addUserBasketToCard(userBasketPrduct) {
   cartItems.innerHTML = "";
+  
   userBasketPrduct.forEach(function (Product) {
 
 
@@ -160,10 +161,14 @@ function addUserBasketToCard(userBasketPrduct) {
       removeProductFromBasket(Product.id)
     });
 
+    
+    ;
+
     cartItem.append(cartItemImage, cartItemTitle);
     cartQuantity.append(cartQuantityInput, btnDanger);
     cartRow.append(cartItem, cartPrice, cartQuantity);
     cartItems.append(cartRow);
+    
   });
 }
 
@@ -189,3 +194,17 @@ function productPrice(userBasketPrice) {
   }) 
   cartTotalPrice.innerHTML = lastPrice
 }
+
+(function deleteAllProduct() {
+  let btnDeletePrice = $.createElement("button")
+  btnDeletePrice.addEventListener("click" , removerAllProuduct)
+  btnDeletePrice.innerHTML = "Delete all"
+  btnDeletePrice.classList = 'delete-all-btn'
+  cartTotalPrice.insertAdjacentElement("afterend" , btnDeletePrice )
+})()
+
+function removerAllProuduct(){
+  userBasket = []
+  addUserBasketToCard(userBasket)
+}
+

@@ -441,6 +441,19 @@
     font-size: 1.2em;
     margin-right: 25px;
 }
+.delete-all-btn {
+    display: flex;
+    border-radius: 20px;
+    padding: 16px;
+    background: darkred;
+    color: white;
+    font-size: 20px;
+    width: 299px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
 
 @media screen and (max-width: 992px) {
   .content-menu h1 {
