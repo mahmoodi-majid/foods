@@ -76,7 +76,7 @@ const AllProduct = [
     count: 1,
   },
 ];
-//get element for dom 
+//get element for dom
 let userBasket = [];
 const mineContent = $.querySelector(".mine-content");
 const cartItems = $.querySelector(".cart-items");
@@ -92,15 +92,26 @@ AllProduct.forEach((Product) => {
   contentBoxTitle.innerHTML = Product.ProductName;
   let contentboxText = $.createElement("p");
   contentboxText.innerHTML = Product.about;
-  let addProductBtn = $.createElement("button");0
-  addProductBtn.innerHTML = "addshop";
+  let addProductBtn = $.createElement("button");
+  addProductBtn.innerHTML = "Add";
   addProductBtn.addEventListener(
     "click",
     function () {
       findProduct(Product.id);
+      let cartQuantityInput = $.createElement("input");
+      cartQuantityInput.classList = "cart-quantity-input";
+      cartQuantityInput.setAttribute("type", "number");
+      cartQuantityInput.value = Product.count;
+      cartQuantityInput.style.marginLeft = "20px";
+      this.append(cartQuantityInput);
+      cartQuantityInput.addEventListener("change" , function(){
+        
+        upDateProductCount(Product.id , cartQuantityInput.value)
+      } )
     },
     { once: true }
   );
+
   contentBoxFoods.append(
     boxPicFoods,
     contentBoxTitle,
