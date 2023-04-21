@@ -1,198 +1,107 @@
 * {
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-}
-body {
-    background-color: rgba(10, 3, 7, 1);
-    color: white;
-}
-
-.form form label {
-    display: inline-block;
-    margin-bottom: 10px;
-}
-.form form .input {
-    margin-bottom: 30px;
-    padding: 14px;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 5px;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    background-color: rgba(210, 210, 210, 0.1);
-    width: 30%;
-    height: 500px;
-    border-radius: 8px;
-}
-.form h1{
-    margin-top: 60px;    
-}
-form :first-child {
-    margin-top: 40px;
-}
-.button {
-    margin: 20px 0px;
-    font-size: 20px;
-    padding: 10px;
-    width: 300px;
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-}
-.container {
+  }
+  
+  .container-fluid {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    flex-direction: column;
+    background-color: #9a616d;
+  }
+  .formLogin {
+    width: 700px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+  }
+  .logoForm h1 {
+    color: rgb(29, 19, 0);
+    font-size: 50px;
+    text-shadow: 2px 5px #e4ca05;
+    margin-bottom: 30px;
+  }
+  .formLogin h4 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .leftLogo {
+    margin: 20px;
+  }
+  .leftLogo input {
+    margin-bottom: 30px;
+  }
+  a {
+    color: black;
+  }
+  .leftLogo span {
+    margin-top: 60px;
+  }
+  .leftLogo ul {
+    list-style-type: none;
+    margin-top: 30px;
+  }
+  .leftLogo ul li a {
+    color: rgb(98, 95, 95);
+    text-decoration: none;
+  }
+  
+  .leftLogo ul :nth-child(2) {
+    margin-left: 10px;
+  }
+  .rightform {
+    height: auto;
+    width: 350px;
+    background-image: url(../img/signupBacground.jpg  );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:  0px 10px 10px 0px;
+    -webkit-border-radius:  0px 10px 10px 0px;
+    -moz-border-radius:  0px 10px 10px 0px;
+    -ms-border-radius:  0px 10px 10px 0px;
+    -o-border-radius:  0px 10px 10px 0px;
+  }
+  .leftLogo p {
+    text-align: center;
+    display: none;
+  }
+  .container-fluidJS {
     height: 100vh;
-}
-.button-out  {
-    margin-top: 10px;
-    font-size: 18px;
-    padding: 7px;
-    width: 100px;
-    border-radius: 7px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    cursor: pointer;
-}
-form :last-child {
-    margin-left: 100px;
-}
-.color-blue {
-    position: absolute;
-    top: 2%;
-    left: 30%;
-    background-color:rgba(0, 0, 200, 0.4);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-.color-orang {
-    position: absolute;
-    top: 73%;
-    right:30%;
-    background-color:rgba(241, 118, 18, 0.6);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-@media screen and (max-width: 992px) {
-    .form {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;    
-    background-color: rgba(210, 210, 210, 0.1);
-    width: 25%;
-    height: 400px;
-    border-radius: 8px;
-    }
-    .form h1 {
-    margin-top: 90px;
-    }
-   .form form .input { 
-    margin-bottom: 15px;
-    padding: 7px;
-    width: 150px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 2px;
-    text-align: center;
-
-    }  
-    .button {
-     margin: 20px 0px;
-     font-size: 10px;
-     padding: 5px;
-     width: 150px;
-     border-radius: 7px;
-     border: none;
-    }
-    .button-out {
-        display: none;
-    } 
-    .color-blue {
-     position: absolute;
-     top: 12%;
-     left: 33%;
-     background-color:rgba(0, 0, 200, 0.4);
-     width: 100px;
-     height: 100px;
-     border-radius: 50%;
-    }
-    .color-orang {
-     position: absolute;
-     top: 74%;
-     right:34%;
-     background-color:rgba(241, 118, 18, 0.6);
-     width: 100px;
-     height: 100px;
-     border-radius: 50%;
-    }
-}
-@media screen and (max-width: 576px) {
-    .form {
-    display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    background-color: rgba(210, 210, 210, 0.1);
-    width: 20%;
-    height: 300px;
-    border-radius: 8px;
-    text-align: center;
-    
+    background-color: #9a616d;
+  }
+  @media only screen and (max-width: 768px) {
+    .rightform {
+      display: none;
     }
-    .form h1 {
-        margin-top: 0px;
-        font-size: 20px;
+    .formLogin {
+      width: 500px;
+      height: 500px;
+      background-color: white;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-   .form form .input { 
-    margin-bottom: 10px;
-    padding: 7px;
-    width: 100px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 2px;
-   
-    
-
-    }  
-    .button {
-        margin: 20px 0px;
-        font-size: 10px;
-        padding: 5px;
-        width: 100px;
-        border-radius: 7px;
-        border: none;
+    .leftLogo h4 {
+      font-size: 20px;
+        
     }
-    .button-out {
-        display: none;
-    } 
-    .color-blue {
-        position: absolute;
-        top: 22%;
-        left: 33%;
-        background-color:rgba(0, 0, 200, 0.4);
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
-    .color-orang {
-        position: absolute;
-        top: 67%;
-        right:34%;
-        background-color:rgba(241, 118, 18, 0.6);
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
-}
+  }
+  
