@@ -1,0 +1,87 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #9a616d;
+}
+.formLogin {
+  width: 700px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: flex;
+}
+.logoForm h1 {
+  color: rgb(29, 19, 0);
+  font-size: 50px;
+  text-shadow: 2px 5px #e4ca05;
+  margin-bottom: 30px;
+}
+.formLogin h4 {
+  margin-bottom: 30px;
+}
+.leftLogo {
+  margin: 20px;
+}
+.leftLogo input {
+  margin-bottom: 30px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.leftLogo span {
+  margin-top: 60px;
+}
+.leftLogo ul {
+  list-style-type: none;
+  margin-top: 30px;
+}
+.leftLogo ul li a {
+  color: rgb(98, 95, 95);
+  text-decoration: none;
+}
+
+.leftLogo ul :nth-child(2) {
+  margin-left: 10px;
+}
+.rightform {
+  height: 400px;
+  width: 350px;
+  background-image: url(../img/loginbackground1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .rightform {
+    display: none;
+  }
+  .formLogin {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
