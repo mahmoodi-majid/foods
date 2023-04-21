@@ -116,6 +116,7 @@ function findProduct(ProductId) {
 
   userBasket.push(SercheProduct);
   addUserBasketToCard(userBasket);
+  console.log(userBasket)
   productPrice(userBasket)
 }
 
@@ -152,7 +153,9 @@ function addUserBasketToCard(userBasketPrduct) {
     cartQuantityInput.classList = "cart-quantity-input";
     cartQuantityInput.setAttribute("type", "number");
     cartQuantityInput.value = Product.count;
-
+    cartQuantityInput.addEventListener("change" , function(){
+      upDateProductCount(Product.id , cartQuantityInput.value)
+    })
     let btnDanger = $.createElement("button");
     btnDanger.classList = "btn btn-danger";
     btnDanger.innerHTML = "Remove";
@@ -160,10 +163,6 @@ function addUserBasketToCard(userBasketPrduct) {
     btnDanger.addEventListener("click", function(){
       removeProductFromBasket(Product.id)
     });
-
-    
-    ;
-
     cartItem.append(cartItemImage, cartItemTitle);
     cartQuantity.append(cartQuantityInput, btnDanger);
     cartRow.append(cartItem, cartPrice, cartQuantity);
@@ -171,7 +170,6 @@ function addUserBasketToCard(userBasketPrduct) {
     
   });
 }
-
 function removeProductFromBasket(ProductIds) {
    userBasket =  userBasket.filter((userBasket) => {
     
@@ -185,13 +183,22 @@ function removeProductFromBasket(ProductIds) {
 
 function productPrice(userBasketPrice) {
   let lastPrice = 0 
-  
   userBasketPrice.forEach(function(userBasketItem){
-     
-
-    lastPrice += userBasketItem.Price
+  
+    
+    lastPrice += userBasketItem.count * userBasketItem.Price
+    console.log(lastPrice)
   }) 
-  cartTotalPrice.innerHTML = lastPrice
+  cartTotalPrice.innerHTML = lastPrice 
+}
+function upDateProductCount(ProductId , newCount) {
+  console.log(ProductId , newCount)
+  userBasket.forEach(product => {
+    if(product.id === ProductId){
+      product.count = newCount
+    }
+  })
+  productPrice(userBasket)
 }
 
 (function deleteAllProduct() {
