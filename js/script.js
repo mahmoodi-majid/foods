@@ -1,5 +1,7 @@
 //Variable
 let $ = document;
+
+//save all product
 const AllProduct = [
   {
     id: 1,
@@ -74,32 +76,31 @@ const AllProduct = [
     count: 1,
   },
 ];
-
+//get element for dom 
 let userBasket = [];
 const mineContent = $.querySelector(".mine-content");
 const cartItems = $.querySelector(".cart-items");
-const cartTotalPrice = $.querySelector(".cart-total-price")
-
+const cartTotalPrice = $.querySelector(".cart-total-price");
+//Show the available products to the user
 AllProduct.forEach((Product) => {
   let contentBoxFoods = $.createElement("div");
   contentBoxFoods.classList = "content-box-foods";
-
   let boxPicFoods = $.createElement("div");
   boxPicFoods.style.backgroundImage = "url(" + Product.imgSrc + ")";
   boxPicFoods.classList = "box-pic-foods";
-
   let contentBoxTitle = $.createElement("h3");
   contentBoxTitle.innerHTML = Product.ProductName;
-
   let contentboxText = $.createElement("p");
   contentboxText.innerHTML = Product.about;
-
-  let addProductBtn = $.createElement("button");
+  let addProductBtn = $.createElement("button");0
   addProductBtn.innerHTML = "addshop";
-  addProductBtn.addEventListener("click", function () {
-    findProduct(Product.id);
-  },{once:true});
-
+  addProductBtn.addEventListener(
+    "click",
+    function () {
+      findProduct(Product.id);
+    },
+    { once: true }
+  );
   contentBoxFoods.append(
     boxPicFoods,
     contentBoxTitle,
@@ -108,122 +109,97 @@ AllProduct.forEach((Product) => {
   );
   mineContent.append(contentBoxFoods);
 });
-
 function findProduct(ProductId) {
   let SercheProduct = AllProduct.find((Product) => {
     return ProductId === Product.id;
   });
-
   userBasket.push(SercheProduct);
   addUserBasketToCard(userBasket);
-  console.log(userBasket)
-  productPrice(userBasket)
+  console.log(userBasket);
+  productPrice(userBasket);
 }
-
+//create the user card and push the product
 function addUserBasketToCard(userBasketPrduct) {
   cartItems.innerHTML = "";
-  
   userBasketPrduct.forEach(function (Product) {
-
-
     let cartRow = $.createElement("div");
     cartRow.classList = "cart-row";
-
     let cartItem = $.createElement("div");
     cartItem.classList = "cart-item cart-column";
-
     let cartItemImage = $.createElement("img");
     cartItemImage.setAttribute("src", Product.imgSrc);
     cartItemImage.classList = "cart-item-image";
     cartItemImage.setAttribute("height", "100");
     cartItemImage.setAttribute("width", "100");
-
     let cartItemTitle = $.createElement("span");
     cartItemTitle.classList = "cart-item-title";
     cartItemTitle.innerHTML = Product.ProductName;
-
     let cartPrice = $.createElement("span");
     cartPrice.classList = "cart-price cart-column";
     cartPrice.innerHTML = Product.Price;
-
     let cartQuantity = $.createElement("div");
     cartQuantity.classList = "cart-quantity cart-column";
-
     let cartQuantityInput = $.createElement("input");
     cartQuantityInput.classList = "cart-quantity-input";
     cartQuantityInput.setAttribute("type", "number");
     cartQuantityInput.value = Product.count;
-    cartQuantityInput.addEventListener("change" , function(){
-      upDateProductCount(Product.id , cartQuantityInput.value)
-    })
+    cartQuantityInput.addEventListener("change", function () {
+      upDateProductCount(Product.id, cartQuantityInput.value);
+    });
     let btnDanger = $.createElement("button");
     btnDanger.classList = "btn btn-danger";
     btnDanger.innerHTML = "Remove";
-
-    btnDanger.addEventListener("click", function(){
-      removeProductFromBasket(Product.id)
+    btnDanger.addEventListener("click", function () {
+      removeProductFromBasket(Product.id);
     });
     cartItem.append(cartItemImage, cartItemTitle);
     cartQuantity.append(cartQuantityInput, btnDanger);
     cartRow.append(cartItem, cartPrice, cartQuantity);
     cartItems.append(cartRow);
-    
   });
 }
 function removeProductFromBasket(ProductIds) {
-   userBasket =  userBasket.filter((userBasket) => {
-    
-    return userBasket.id !== ProductIds
-  })
-  
-  
-  addUserBasketToCard(userBasket)
+  userBasket = userBasket.filter((userBasket) => {
+    return userBasket.id !== ProductIds;
+  });
+  addUserBasketToCard(userBasket);
 }
-
-
 function productPrice(userBasketPrice) {
-  let lastPrice = 0 
-  userBasketPrice.forEach(function(userBasketItem){
-  
-    
-    lastPrice += userBasketItem.count * userBasketItem.Price
-    console.log(lastPrice)
-  }) 
-  cartTotalPrice.innerHTML = lastPrice 
+  let lastPrice = 0;
+  userBasketPrice.forEach(function (userBasketItem) {
+    lastPrice += userBasketItem.count * userBasketItem.Price;
+    console.log(lastPrice);
+  });
+  cartTotalPrice.innerHTML = lastPrice;
 }
-function upDateProductCount(ProductId , newCount) {
-  console.log(ProductId , newCount)
-  userBasket.forEach(product => {
-    if(product.id === ProductId){
-      product.count = newCount
+function upDateProductCount(ProductId, newCount) {
+  console.log(ProductId, newCount);
+  userBasket.forEach((product) => {
+    if (product.id === ProductId) {
+      product.count = newCount;
     }
-  })
-  productPrice(userBasket)
+  });
+  productPrice(userBasket);
 }
-
 (function deleteAllProduct() {
-  let btnDeletePrice = $.createElement("button")
-  btnDeletePrice.addEventListener("click" , removerAllProuduct)
-  btnDeletePrice.innerHTML = "Delete all"
-  btnDeletePrice.classList = 'delete-all-btn'
-  cartTotalPrice.insertAdjacentElement("afterend" , btnDeletePrice )
-})()
-
-function removerAllProuduct(){
-  userBasket = []
-  cartTotalPrice.innerHTML = 0
-  addUserBasketToCard(userBasket)
+  let btnDeletePrice = $.createElement("button");
+  btnDeletePrice.addEventListener("click", removerAllProuduct);
+  btnDeletePrice.innerHTML = "Delete all";
+  btnDeletePrice.classList = "delete-all-btn";
+  cartTotalPrice.insertAdjacentElement("afterend", btnDeletePrice);
+})();
+function removerAllProuduct() {
+  userBasket = [];
+  cartTotalPrice.innerHTML = 0;
+  addUserBasketToCard(userBasket);
 }
-
-(function paymentProduct(){
-  let btnPayment = $.createElement("button")
-  btnPayment.addEventListener("click" ,priceProduct)
-  btnPayment.innerHTML = "Payment"
-  btnPayment.classList = 'Payment-all-btn'
-  cartTotalPrice.insertAdjacentElement("afterend" , btnPayment )
-  
-})()
-
- function priceProduct(){
-  alert("Thank you for visiting our store \n log in || sign up ")
- }
+(function paymentProduct() {
+  let btnPayment = $.createElement("button");
+  btnPayment.addEventListener("click", priceProduct);
+  btnPayment.innerHTML = "Payment";
+  btnPayment.classList = "Payment-all-btn";
+  cartTotalPrice.insertAdjacentElement("afterend", btnPayment);
+})();
+function priceProduct() {
+  alert("Thank you for visiting our store \n log in || sign up ");
+}
