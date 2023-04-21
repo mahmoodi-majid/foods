@@ -58,13 +58,12 @@ a {
   margin-left: 10px;
 }
 .rightform {
-  height: 400px;
+  height: 500px;
   width: 350px;
   background-image: url(../img/loginbackground1.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-}
+  background-size: cover50}
 
 @media only screen and (max-width: 768px) {
   .rightform {
