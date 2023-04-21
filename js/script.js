@@ -98,7 +98,7 @@ AllProduct.forEach((Product) => {
   addProductBtn.innerHTML = "addshop";
   addProductBtn.addEventListener("click", function () {
     findProduct(Product.id);
-  });
+  },{once:true});
 
   contentBoxFoods.append(
     boxPicFoods,
